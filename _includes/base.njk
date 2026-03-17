@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{% if title %}
+  <title>{{ title }} - OyasumiSekai's HP</title>
+{% else %}
+  <title>OyasumiSekai's HP</title>
+{% endif %}
+
+    <link rel="icon" href="{{ favicon | default('/favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ icon | default('/icon.png') }}">
+    <meta name="twitter:card" content="{{ card | default('summary') }}">
+    <meta property="og:title" content="{{ ogTitle | default('OyasumiSekai\'s faster HP') }}">
+    <meta property="og:description" content="{{ ogDescription | default('OyasumiSekaiのちょっと速いホームページ') }}">
+    <meta property="og:image" content="{{ ogImage | default('https://oyasumisekai.net/icon.png') }}">
+    <meta property="og:url" content="{{ ogUrl | default('https://oyasumisekai.net' + page.url) }}">
+    <meta property="og:type" content="{{ ogType | default('website') }}">
+</head>
+<body>
+  <header>OyasumiSekai Header</header>
+  
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer>OyasumiSekai Footer</footer>
+</body>
+</html>
