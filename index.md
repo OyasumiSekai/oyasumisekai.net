@@ -1,5 +1,5 @@
 ---
 layout: base.njk
 ---
-# OyasumiSekai!  
+# OyasumiSekai!
 OyasumiSekai's **faster** HP
