@@ -44,9 +44,17 @@ header {
   transition: 0.3s;
 }
 
-img.icon {
-  width: 25%;
-  height: auto;
+.icon img {
+  /* ロゴの高さを指定。
+     今のヘッダーのpaddingが1rem（約16px）なので、
+     32px〜40pxくらいがちょうどいいサイズ感です。 */
+  height: 2rem; 
+
+  /* 横幅は自動調整にして、アスペクト比を保つ */
+  width: auto;
+
+  /* 画像の下に謎の余白ができるのを防ぐ */
+  display: block; 
 }
 
 .icon:hover {
