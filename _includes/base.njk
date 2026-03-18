@@ -10,22 +10,22 @@
   <title>OyasumiSekai's HP</title>
 {% endif %}
 
-    <link rel="icon" href="{{ favicon | default('/favicon.ico') }}">
-    <link rel="apple-touch-icon" href="{{ icon | default('/icon.png') }}">
+    <link rel="icon" href="{{ favicon | default('/src/favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ icon | default('/src/icon.png') }}">
     <meta name="twitter:card" content="{{ card | default('summary') }}">
     <meta property="og:title" content="{{ ogTitle | default('OyasumiSekai\'s faster HP') }}">
     <meta property="og:description" content="{{ ogDescription | default('OyasumiSekaiのちょっと速いホームページ') }}">
-    <meta property="og:image" content="{{ ogImage | default('https://oyasumisekai.net/icon.png') }}">
+    <meta property="og:image" content="{{ ogImage | default('https://oyasumisekai.net/src/icon.png') }}">
     <meta property="og:url" content="{{ ogUrl | default('https://oyasumisekai.net' + page.url) }}">
     <meta property="og:type" content="{{ ogType | default('website') }}">
 </head>
 <body>
-  <header>OyasumiSekai Header</header>
+{% include "header.njk" %}
   
   <main>
     {{ content | safe }}
   </main>
 
-  <footer>OyasumiSekai Footer</footer>
+{% include "footer.njk" %}
 </body>
 </html>
