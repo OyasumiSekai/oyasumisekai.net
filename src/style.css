@@ -57,6 +57,12 @@ header {
   display: block; 
 }
 
+.icon:hover img {
+  /* シアン色（#00e5ff）の影を画像の周りにドロップする */
+  filter: drop-shadow(0 0 8px var(--accent));
+  transition: 0.3s;
+}
+
 .icon:hover {
   text-shadow: 0 0 15px var(--accent); /* ぼんやり光る */
 }
