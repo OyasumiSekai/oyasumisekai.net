@@ -41,10 +41,11 @@ header {
   letter-spacing: -1px;
   color: var(--accent);
   text-decoration: none;
+  width: 25%;
   transition: 0.3s;
 }
 
-.logo:hover {
+.icon:hover {
   text-shadow: 0 0 15px var(--accent); /* ぼんやり光る */
 }
 
