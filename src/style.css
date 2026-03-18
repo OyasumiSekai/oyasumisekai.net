@@ -41,8 +41,12 @@ header {
   letter-spacing: -1px;
   color: var(--accent);
   text-decoration: none;
-  width: 25%;
   transition: 0.3s;
+}
+
+img.icon {
+  width: 25%;
+  height: auto;
 }
 
 .icon:hover {
