@@ -1,0 +1,104 @@
+:root {
+  --bg: #050505;        /* 漆黒より少しだけ浮かび上がった黒 */
+  --accent: #00e5ff;    /* Crossのシアン */
+  --text: #e0e0e0;
+  --sub-text: #888;
+  --glass: rgba(255, 255, 255, 0.03);
+  --blur: 12px;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, sans-serif; /* モダンなフォント */
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* --- ヘッダー：すりガラス効果 --- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(5, 5, 5, 0.7); /* 少し透ける */
+  backdrop-filter: blur(var(--blur)); /* 魔法のボカシ */
+  -webkit-backdrop-filter: blur(var(--blur));
+  border-bottom: 1px solid var(--glass);
+}
+
+.header-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  color: var(--accent);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  text-shadow: 0 0 15px var(--accent); /* ぼんやり光る */
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* --- メインコンテンツ --- */
+main {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-container {
+  max-width: 700px;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* Markdownのh1をかっこよくする */
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: -2px;
+  background: linear-gradient(to bottom, #fff, #666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+/* --- フッター --- */
+footer {
+  padding: 3rem 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--sub-text);
+  border-top: 1px solid var(--glass);
+}
+
+.speed-tag {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: italic;
+  opacity: 0.5;
+}

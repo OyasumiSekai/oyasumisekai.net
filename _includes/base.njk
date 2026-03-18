@@ -18,6 +18,8 @@
     <meta property="og:image" content="{{ ogImage | default('https://oyasumisekai.net/src/icon.png') }}">
     <meta property="og:url" content="{{ ogUrl | default('https://oyasumisekai.net' + page.url) }}">
     <meta property="og:type" content="{{ ogType | default('website') }}">
+    <link rel="stylesheet" href="{{ style | default('/src/style.css') }}">
+
 </head>
 <body>
 {% include "header.njk" %}
