@@ -3,4 +3,4 @@ layout: base.njk
 ---
 # OyasumiSekai!
 
-OyasumiSekai's faster HP
+OyasumiSekai's **faster** HP
